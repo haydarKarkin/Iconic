@@ -108,7 +108,14 @@ if [ -z ${INPUT_PATH} ]; then
     # Uses FontAwesome as default
     init 'Fonts/FontAwesome/FontAwesome.otf'
 elif [ -z ${CUSTOM_NAME} ]; then
-    init ${INPUT_PATH}
+    #init ${INPUT_PATH}
+
+    SEARCH_DIR="${INPUT_PATH}/*" 
+    for ENTRY in $SEARCH_DIR
+        do
+            echo "Iconizer: Initilaize for file '${ENTRY}'"
+            init ${ENTRY}
+    done
 else
     init ${INPUT_PATH} ${CUSTOM_NAME}
 fi
