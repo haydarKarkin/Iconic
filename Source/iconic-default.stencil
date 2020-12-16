@@ -178,7 +178,7 @@ public final class {{enumName}}View: IconImageView {
     {% endfor %}
 }
 
-extension {{enumName}} : IconDrawable {
+extension {{enumName}}: IconDrawable {
 
     /** The icon font's family name. */
     public static var familyName: String {
