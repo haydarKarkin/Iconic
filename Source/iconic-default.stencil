@@ -70,7 +70,7 @@ import UIKit
      - parameter color: The tint color of the image.
      - parameter edgeInsets: The edge insets to be used as padding values.
      */
-     @objc(imageWith{{enumName}}: size: color: edgeInsets:)
+    @objc(imageWith{{enumName}}: size: color: edgeInsets:)
     class func image(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?, edgeInsets: UIEdgeInsets) -> UIImage {
         return icon.image(ofSize: size, color: color, edgeInsets: edgeInsets)
     }
@@ -125,6 +125,7 @@ public final class {{enumName}}View: IconImageView {
      - parameter target: The object that receives the action message.
      - parameter action: The action to send to target when this item is selected.
      */
+    @objc(initWith{{enumName}}: size: target: action:)
     convenience init(withIcon icon: {{enumName}}, size: CGSize, target: AnyObject?, action: Selector) {
 
         let image = icon.image(ofSize: size, color: .black)
@@ -142,6 +143,7 @@ public final class {{enumName}}View: IconImageView {
      - parameter size: The size of the image, in points.
      - parameter title: The item's title. If nil, a title is not displayed.
      */
+    @objc(initWith{{enumName}}: size: title:)
     convenience init(withIcon icon: {{enumName}}, size: CGSize, title: String?) {
 
         let image = icon.image(ofSize: size, color: .black)
@@ -159,6 +161,7 @@ public final class {{enumName}}View: IconImageView {
      - parameter color: The color of the image.
      - parameter state: The state that uses the specified title. The values are described in UIControl.State.
      */
+    @objc(setIconImageWith{{enumName}}: size: color: state:)
     func setIconImage(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?, forState state: UIControl.State) {
 
         let image = icon.image(ofSize: size, color: color ?? .black)
