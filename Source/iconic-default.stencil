@@ -32,6 +32,7 @@ import UIKit
      - parameter pointSize: The size of the font.
      - parameter color: The tint color of the font.
      */
+    @objc(attributedStringWith{{enumName}}: pointSize: color:) 
     class func attributedString(withIcon icon: {{enumName}}, pointSize: CGFloat, color: UIColor?) -> NSAttributedString {
         return icon.attributedString(ofSize: pointSize, color: color)
     }
@@ -44,6 +45,7 @@ import UIKit
      - parameter color: The tint color of the font.
      - parameter edgeInsets: The edge insets to be used as horizontal and vertical padding.
      */
+    @objc(attributedStringWith{{enumName}}: pointSize: color: edgeInsets:)
     class func attributedString(withIcon icon: {{enumName}}, pointSize: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString {
         return icon.attributedString(ofSize: pointSize, color: color, edgeInsets: edgeInsets)
     }
@@ -55,6 +57,7 @@ import UIKit
      - parameter size: The size of the image, in points.
      - parameter color: A tint color for the image.
      */
+    @objc(imageWith{{enumName}}: size: color:)
     class func image(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?) -> UIImage {
         return icon.image(ofSize: size, color: color)
     }
@@ -67,6 +70,7 @@ import UIKit
      - parameter color: The tint color of the image.
      - parameter edgeInsets: The edge insets to be used as padding values.
      */
+     @objc(imageWith{{enumName}}: size: color: edgeInsets:)
     class func image(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?, edgeInsets: UIEdgeInsets) -> UIImage {
         return icon.image(ofSize: size, color: color, edgeInsets: edgeInsets)
     }
